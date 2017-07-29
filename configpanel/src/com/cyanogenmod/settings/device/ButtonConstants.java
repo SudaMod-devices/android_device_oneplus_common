@@ -43,7 +43,7 @@ public class ButtonConstants {
     public static final int KEY_SLIDER_BOTTOM = 603;
 
     static final String ACTION_UPDATE_SLIDER_SETTINGS
-            = "org.mokee.settings.device.UPDATE_SLIDER_SETTINGS";
+            = "org.cyanogenmod.settings.device.UPDATE_SLIDER_SETTINGS";
 
     static final String EXTRA_SLIDER_USAGE = "usage";
     static final String EXTRA_SLIDER_ACTIONS = "actions";

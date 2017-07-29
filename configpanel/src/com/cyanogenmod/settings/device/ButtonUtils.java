@@ -16,7 +16,7 @@
 
 package com.cyanogenmod.settings.device;
 
-import org.mokee.internal.util.FileUtils;
+import org.cyanogenmod.internal.util.FileUtils;
 
 class ButtonUtils {
 

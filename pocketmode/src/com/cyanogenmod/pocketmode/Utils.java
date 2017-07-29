@@ -18,12 +18,12 @@ package com.cyanogenmod.pocketmode;
 
 import android.content.Context;
 
-import mokee.providers.MKSettings;
+import cyanogenmod.providers.CMSettings;
 
-import org.mokee.internal.util.FileUtils;
+import org.cyanogenmod.internal.util.FileUtils;
 
-import static org.mokee.platform.internal.R.bool.config_proximityCheckOnWake;
-import static org.mokee.platform.internal.R.bool.config_proximityCheckOnWakeEnabledByDefault;
+import static org.cyanogenmod.platform.internal.R.bool.config_proximityCheckOnWake;
+import static org.cyanogenmod.platform.internal.R.bool.config_proximityCheckOnWakeEnabledByDefault;
 
 class Utils {
 
