@@ -38,8 +38,8 @@ class Utils {
     }
 
     static boolean isEnabled(Context content) {
-        return MKSettings.System.getInt(content.getContentResolver(),
-                MKSettings.System.PROXIMITY_ON_WAKE,
+        return CMSettings.System.getInt(content.getContentResolver(),
+                CMSettings.System.PROXIMITY_ON_WAKE,
                 isEnabledByDefault(content) ? 1 : 0) != 0;
     }
 
