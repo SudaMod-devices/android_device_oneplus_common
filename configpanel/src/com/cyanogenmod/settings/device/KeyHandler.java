@@ -87,30 +87,32 @@ public class KeyHandler implements DeviceKeyHandler {
         switch (usage) {
             case NotificationController.ID:
                 mSliderController = mNotificationController;
-                mSliderController.update(actions);
                 break;
             case FlashlightController.ID:
                 mSliderController = mFlashlightController;
-                mSliderController.update(actions);
                 break;
             case BrightnessController.ID:
                 mSliderController = mBrightnessController;
-                mSliderController.update(actions);
                 break;
             case RotationController.ID:
                 mSliderController = mRotationController;
-                mSliderController.update(actions);
                 break;
             case RingerController.ID:
                 mSliderController = mRingerController;
-                mSliderController.update(actions);
                 break;
         }
 
-        mSliderController.restoreState();
+        if (mSliderController != null) {
+            mSliderController.update(actions);
+            mSliderController.restoreState();
+        }
     }
 
     public boolean handleKeyEvent(KeyEvent event) {
+        if (event.getAction() != KeyEvent.ACTION_UP) {
+            return false;
+        }
+
         int scanCode = event.getScanCode();
         return mSliderController != null &&
                 mSliderController.processEvent(scanCode);
