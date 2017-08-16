@@ -28,6 +28,7 @@
   <string name="notification_slider_for_brightness">亮度</string>
   <string name="notification_slider_for_rotation">旋转</string>
   <string name="notification_slider_for_ringer">振铃</string>
+  <string name="notification_slider_for_caffeine">保持亮屏</string>
   <string name="notification_slider_mode_total_silence">总是静音</string>
   <string name="notification_slider_mode_alarms_only">仅限闹铃</string>
   <string name="notification_slider_mode_priority_only">仅限优先</string>
@@ -45,4 +46,9 @@
   <string name="notification_slider_ringer_normal">正常</string>
   <string name="notification_slider_ringer_vibrate">振动</string>
   <string name="notification_slider_ringer_silent">静音</string>
+  <string name="notification_slider_caffeine_off">关闭</string>
+  <string name="notification_slider_caffeine_5min">5 分钟</string>
+  <string name="notification_slider_caffeine_10min">10 分钟</string>
+  <string name="notification_slider_caffeine_30min">30 分钟</string>
+  <string name="notification_slider_caffeine_infinity">无限时长</string>
 </resources>

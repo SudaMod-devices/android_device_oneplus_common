@@ -34,6 +34,7 @@ import org.mokee.settings.device.slider.FlashlightController;
 import org.mokee.settings.device.slider.BrightnessController;
 import org.mokee.settings.device.slider.RotationController;
 import org.mokee.settings.device.slider.RingerController;
+import org.mokee.settings.device.slider.CaffeineController;
 
 public class KeyHandler implements DeviceKeyHandler {
 
@@ -46,6 +47,7 @@ public class KeyHandler implements DeviceKeyHandler {
     private final BrightnessController mBrightnessController;
     private final RotationController mRotationController;
     private final RingerController mRingerController;
+    private final CaffeineController mCaffeineController;
 
     private SliderControllerBase mSliderController;
 
@@ -66,6 +68,7 @@ public class KeyHandler implements DeviceKeyHandler {
         mBrightnessController = new BrightnessController(context);
         mRotationController = new RotationController(context);
         mRingerController = new RingerController(context);
+        mCaffeineController = new CaffeineController(context);
 
         mContext.registerReceiver(mUpdateReceiver,
                 new IntentFilter(ButtonConstants.ACTION_UPDATE_SLIDER_SETTINGS));
@@ -99,6 +102,9 @@ public class KeyHandler implements DeviceKeyHandler {
                 break;
             case RingerController.ID:
                 mSliderController = mRingerController;
+                break;
+            case CaffeineController.ID:
+                mSliderController = mCaffeineController;
                 break;
         }
 

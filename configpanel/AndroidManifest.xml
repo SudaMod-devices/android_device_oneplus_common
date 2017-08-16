@@ -18,6 +18,7 @@
     package="com.cyanogenmod.settings.device"
     android:sharedUserId="android.uid.system">
 
+    <uses-permission android:name="android.permission.WAKE_LOCK" />
     <uses-permission android:name="mokee.permission.HARDWARE_ABSTRACTION_ACCESS" />
 
     <protected-broadcast android:name="org.mokee.settings.device.UPDATE_SLIDER_SETTINGS" />

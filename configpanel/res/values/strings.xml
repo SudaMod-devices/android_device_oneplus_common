@@ -30,6 +30,7 @@
     <string name="notification_slider_for_brightness">Brightness</string>
     <string name="notification_slider_for_rotation">Rotation</string>
     <string name="notification_slider_for_ringer">Ringer</string>
+    <string name="notification_slider_for_caffeine">Caffeine</string>
 
     <string name="notification_slider_mode_total_silence">Total silence</string>
     <string name="notification_slider_mode_alarms_only">Alarms only</string>
@@ -52,5 +53,11 @@
     <string name="notification_slider_ringer_normal">Normal</string>
     <string name="notification_slider_ringer_vibrate">Vibrate</string>
     <string name="notification_slider_ringer_silent">Silent</string>
+
+    <string name="notification_slider_caffeine_off">Off</string>
+    <string name="notification_slider_caffeine_5min">5 mins</string>
+    <string name="notification_slider_caffeine_10min">10 mins</string>
+    <string name="notification_slider_caffeine_30min">30 mins</string>
+    <string name="notification_slider_caffeine_infinity">Forever</string>
 
 </resources>
