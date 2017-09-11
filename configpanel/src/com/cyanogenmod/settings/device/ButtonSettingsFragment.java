@@ -100,6 +100,10 @@ public class ButtonSettingsFragment extends NodePreferenceFragment {
                 return updateSliderActions(
                         R.array.notification_slider_ringer_entries,
                         R.array.notification_slider_ringer_entry_values);
+            case ButtonConstants.SLIDER_FOR_CAFFEINE:
+                return updateSliderActions(
+                        R.array.notification_slider_caffeine_entries,
+                        R.array.notification_slider_caffeine_entry_values);
             default:
                 return false;
         }
@@ -266,6 +270,8 @@ public class ButtonSettingsFragment extends NodePreferenceFragment {
                 return R.array.config_defaultSliderActionsForRotation;
             case ButtonConstants.SLIDER_FOR_RINGER:
                 return R.array.config_defaultSliderActionsForRinger;
+            case ButtonConstants.SLIDER_FOR_CAFFEINE:
+                return R.array.config_defaultSliderActionsForCaffeine;
             default:
                 return 0;
         }

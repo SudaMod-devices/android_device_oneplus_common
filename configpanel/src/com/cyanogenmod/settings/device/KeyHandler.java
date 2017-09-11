@@ -34,6 +34,7 @@ import org.cyanogenmod.settings.device.slider.FlashlightController;
 import org.cyanogenmod.settings.device.slider.BrightnessController;
 import org.cyanogenmod.settings.device.slider.RotationController;
 import org.cyanogenmod.settings.device.slider.RingerController;
+import org.cyanogenmod.settings.device.slider.CaffeineController;
 
 public class KeyHandler implements DeviceKeyHandler {
 
@@ -46,6 +47,7 @@ public class KeyHandler implements DeviceKeyHandler {
     private final BrightnessController mBrightnessController;
     private final RotationController mRotationController;
     private final RingerController mRingerController;
+    private final CaffeineController mCaffeineController;
 
     private SliderControllerBase mSliderController;
 
@@ -66,6 +68,7 @@ public class KeyHandler implements DeviceKeyHandler {
         mBrightnessController = new BrightnessController(context);
         mRotationController = new RotationController(context);
         mRingerController = new RingerController(context);
+        mCaffeineController = new CaffeineController(context);
 
         mContext.registerReceiver(mUpdateReceiver,
                 new IntentFilter(ButtonConstants.ACTION_UPDATE_SLIDER_SETTINGS));
@@ -87,30 +90,35 @@ public class KeyHandler implements DeviceKeyHandler {
         switch (usage) {
             case NotificationController.ID:
                 mSliderController = mNotificationController;
-                mSliderController.update(actions);
                 break;
             case FlashlightController.ID:
                 mSliderController = mFlashlightController;
-                mSliderController.update(actions);
                 break;
             case BrightnessController.ID:
                 mSliderController = mBrightnessController;
-                mSliderController.update(actions);
                 break;
             case RotationController.ID:
                 mSliderController = mRotationController;
-                mSliderController.update(actions);
                 break;
             case RingerController.ID:
                 mSliderController = mRingerController;
-                mSliderController.update(actions);
+                break;
+            case CaffeineController.ID:
+                mSliderController = mCaffeineController;
                 break;
         }
 
-        mSliderController.restoreState();
+        if (mSliderController != null) {
+            mSliderController.update(actions);
+            mSliderController.restoreState();
+        }
     }
 
     public boolean handleKeyEvent(KeyEvent event) {
+        if (event.getAction() != KeyEvent.ACTION_UP) {
+            return false;
+        }
+
         int scanCode = event.getScanCode();
         return mSliderController != null &&
                 mSliderController.processEvent(scanCode);

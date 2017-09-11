@@ -1,6 +1,6 @@
 #
 # Copyright (C) 2014 The CyanogenMod Project
-#               2017 The MoKKee Open Source Project
+#               2017 The MoKee Open Source Project
 #
 # Licensed under the Apache License, Version 2.0 (the "License");
 # you may not use this file except in compliance with the License.
@@ -26,5 +26,5 @@ BOARD_HARDWARE_CLASS += \
 TARGET_POWERHAL_VARIANT := qcom
 
 # Releasetools
-TARGET_RECOVERY_UPDATER_LIBS := librecovery_updater_oppo
-TARGET_RELEASETOOLS_EXTENSIONS := device/oppo/common
+TARGET_RECOVERY_UPDATER_LIBS := librecovery_updater_oneplus
+TARGET_RELEASETOOLS_EXTENSIONS := device/oneplus/common
