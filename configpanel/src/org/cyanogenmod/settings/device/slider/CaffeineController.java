@@ -14,7 +14,7 @@
  * limitations under the License.
  */
 
-package org.mokee.settings.device.slider;
+package org.cyanogenmod.settings.device.slider;
 
 import android.content.BroadcastReceiver;
 import android.content.Context;
@@ -25,7 +25,7 @@ import android.util.Log;
 
 import static java.util.concurrent.TimeUnit.MINUTES;
 
-import org.mokee.settings.device.SliderControllerBase;
+import org.cyanogenmod.settings.device.SliderControllerBase;
 
 public final class CaffeineController extends SliderControllerBase {
 
